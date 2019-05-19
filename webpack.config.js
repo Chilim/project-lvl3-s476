@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const GoogleFontsPlugin = require('google-fonts-webpack-plugin');
 
 module.exports = {
 	mode: process.env.NODE_ENV || 'development',
@@ -25,6 +24,8 @@ module.exports = {
 		],
 	},
 	plugins: [
-		new HtmlWebpackPlugin(),
+		new HtmlWebpackPlugin({
+			template: './src/index.html',
+		}),
 	],
 };
